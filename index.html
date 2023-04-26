@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Savings Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Monthly Savings Calculator</h1>
+    <form>
+        <label for="target-savings">Enter your target monthly savings:</label>
+        <input type="number" id="target-savings" name="target-savings" placeholder="Enter amount" required>
+        <button type="button" onclick="calculateSavings()">Calculate Savings</button>
+    </form>
+
+    <table id="allocation-table">
+        <thead>
+            <tr>
+                <th>Allocation Group</th>
+                <th>Monthly Allocation</th>
+                <th>Current Balance</th>
+                <th>Target Interest Rate (%)</th>
+                <th>Time to Maturity (years)</th>
+                <th>Projected Future Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Allocation group rows will be added here -->
+        </tbody>
+    </table>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
