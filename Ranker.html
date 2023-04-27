@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop Categories</title>
+  <script>
+        function submitOrder() {
+            const order = {
+const order = {
+  categoryNames: ['Groceries', 'Rent', 'Utilities', 'Entertainment', 'Savings', 'Miscellaneous'],
+  categoryRanks: [1, 2, 3, 4, 5, 6]
+};
+
+const queryString = `?order=${encodeURIComponent(JSON.stringify(order))}`;
+
+window.location.href = 'page2.html' + queryString;
+};
+            const queryString = new URLSearchParams(order).toString();
+            const url = "page2.html?" + queryString;
+            window.location.href = url;
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Drag and Drop Categories</h1>
+    <div id="categories">
+      <div class="category" draggable="true">Retirement</div>
+      <div class="category" draggable="true">Kids/College</div>
+      <div class="category" draggable="true">Medium Term</div>
+      <div class="category" draggable="true">Short Term</div>
+      <div class="category" draggable="true">Emergency</div>
+      <div class="category" draggable="true">Quality of Life</div>
+    </div>
+    <button id="submit-button">Submit</button>
+    <script src="script.js"></script>
+  </body>
+        <button onclick="submitOrder()">Submit</button>
+</html>
